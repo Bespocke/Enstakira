@@ -1,0 +1,21 @@
+User-agent: *
+Disallow: /list.html
+Disallow: /bda.html
+Disallow: /bee.html
+Disallow: /bureau.html
+Disallow: /fusion.html
+Disallow: /inte.html
+Disallow: /inter.html
+Disallow: /com.html
+Disallow: /dd.html
+Disallow: /fipa.html
+Disallow: /log.html
+Disallow: /secu.html
+Disallow: /assets/pp/
+Disallow: /*.jpg$
+Disallow: /*.png$
+Disallow: /*.gif$
+Disallow: /*.jpeg$
+
+
+Sitemap: https://bespocke.github.io/Enstakira/sitemap.xml

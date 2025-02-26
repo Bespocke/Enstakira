@@ -454,6 +454,11 @@
             menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
         }
     </script>
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault()); // Désactive clic droit
+        document.addEventListener('dragstart', event => event.preventDefault());  // Empêche le glisser-déposer
+        document.addEventListener('copy', event => event.preventDefault());       // Désactive le copier/coller
+    </script>
 
 </body>
 </html>
