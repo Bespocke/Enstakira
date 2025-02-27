@@ -17,6 +17,7 @@
             font-family: 'Arial Black', sans-serif;
             flex-direction: column;
             overflow: auto;
+            background-color: black;
         }
 
         #background {
@@ -37,29 +38,12 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            text-align: center;
             gap: 10px;
             padding: 20px;
             width: 80%;
             max-width: 600px;
-        }
-
-        .search-bar {
-    width: 95%;
-    font-family: "Arial Black", sans-serif;
-    padding: 10px;
-    font-size: 1rem;
-    margin-bottom: 20px;
-    border: 3px solid #8000ff;
-    border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #894fd0;
-    text-align: center; /* Centrer le texte dans la barre */
-}
-
-        .search-bar:focus {
-            outline: none;
-            border-color: rgb(231, 58, 154);
-            box-shadow: 0 0 10px rgb(231, 58, 154);
         }
 
         .btn {
@@ -282,9 +266,12 @@
         @media (max-width: 640px) {
             html, body {
                 background-position: 62% center !important;
-
         height: 100vh; /* Force à remplir la hauteur de l'écran */
     }
+
+        p {
+            font-family: "Montserrat";
+        }
 
         .dropdown {
                 right: 20px;
@@ -329,6 +316,11 @@
         height: 100vh; /* Force à remplir la hauteur de l'écran */
     }
 
+        p {
+            font-family: "Montserrat";
+
+        }
+        
         .dropdown {
                 right: 20px;
             }
@@ -436,7 +428,8 @@
         </p><br>
         <p>Des bisous !</p>
     </div>
-    <button onclick="window.location.href='https://gd.games/games/ef8b5991-5db1-4ae2-9bd0-f3123716afce'" class="btn">Le lien du jeux</button>
+    <button onclick="window.location.href='https://gd.games/games/ef8b5991-5db1-4ae2-9bd0-f3123716afce'" class="btn">Le premier jeux</button>
+    <button onclick="window.location.href='https://gd.games/prezakira/chasing-akira-s-money'" class="btn">Le deuxième jeux !</button>
 </div>
 
 <script>
