@@ -46,6 +46,50 @@
             max-width: 600px;
         }
 
+        
+
+        .block-rules {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            background-color: black;
+            color: rgb(170, 164, 164);
+            font-family: 'Arial Black', sans-serif;
+            text-align: center;
+            font-size: 1.1rem;
+            padding: 12px 24px;
+            border: 3px solid #8000ff;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            z-index: 1; /* Pour s'assurer que le bouton est devant */
+            margin-bottom: 10px; /* Espacement entre les boutons */
+        }
+
+        .alineas {
+            margin-left: 20px; /* Ajuste cette valeur selon le besoin */
+        }
+
+        ul {
+            list-style-type: disc; /* Définit les puces comme des cercles */
+            margin-left: 20px; /* Décale légèrement la liste vers la droite */
+            padding-left: 20px; /* Espace entre les puces et le texte */
+        }
+
+        /* Optionnel : personnalisation des puces (si tu veux changer le style) */
+        ul li {
+            font-size: 1rem; /* Ajuste la taille de la police */
+            margin-bottom: 5px; /* Espacement entre les éléments de la liste */
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: rgb(231, 58, 154);
+            text-shadow: 1px 1px 0.5px rgba(0, 0, 0, 1);
+        }
+
+
         .btn {
             background-color: black;
             color: #894fd0;
@@ -67,7 +111,7 @@
             color: black;
             transform: scale(1.1);
             border: 3px solid rgb(231, 58, 154);
-    box-shadow: 0 0 15px  rgb(231, 58, 154);
+            box-shadow: 0 0 15px  rgb(231, 58, 154);
         }
 
         /* Effet glitch hachuré */
@@ -93,14 +137,6 @@
         .btn:hover::before {
             opacity: 0.4;
         }
-
-        .error {
-            color: rgb(231, 58, 154);
-            text-shadow: 1px 1px 0.2px rgba(0, 0, 0, 1);
-    font-size: 1rem;
-    display: none;
-    text-align: center; /* Centrer le message d'erreur */
-}
 
         /* Style général du menu */
         .dropdown {
@@ -355,50 +391,6 @@
             }
 
         }
-
-
-        .block-rules {
-            margin-top: 30px;
-            margin-bottom: 30px;
-            margin-left: 40px; /* Décale le contenu sur la droite pour qu'il soit aligné avec le point */
-            background-color: black;
-            color: rgb(170, 164, 164);
-            font-family: 'Arial Black', sans-serif;
-            text-align: center;
-            font-size: 1.1rem;
-            padding: 12px 24px;
-            border: 3px solid #8000ff;
-            border-radius: 4px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease-in-out;
-            position: relative;
-            z-index: 1; /* Pour s'assurer que le bouton est devant */
-            margin-bottom: 10px; /* Espacement entre les boutons */
-        }
-
-        .alineas {
-            margin-left: 20px; /* Ajuste cette valeur selon le besoin */
-        }
-
-        ul {
-            list-style-type: disc; /* Définit les puces comme des cercles */
-            margin-left: 20px; /* Décale légèrement la liste vers la droite */
-            padding-left: 20px; /* Espace entre les puces et le texte */
-        }
-
-        /* Optionnel : personnalisation des puces (si tu veux changer le style) */
-        ul li {
-            font-size: 1rem; /* Ajuste la taille de la police */
-            margin-bottom: 5px; /* Espacement entre les éléments de la liste */
-        }
-
-        p {
-            font-size: 1.2rem;
-            color: rgb(231, 58, 154);
-            text-shadow: 1px 1px 0.5px rgba(0, 0, 0, 1);
-        }
-
     </style>
 </head>
 <body>
