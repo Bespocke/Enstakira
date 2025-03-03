@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Interactive avec Indices Vigenère</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        /* Assurer que la carte occupe toute la fenêtre */
+        html, body {
+            height: 100%;
+            margin: 0;
+            background-color: black;
+        }
+
+        #map {
+            height: 100%; /* La carte occupe toute la hauteur de la fenêtre */
+            width: 100%;  /* La carte occupe toute la largeur de la fenêtre */
+        }
+
+        .popup-content {
+            font-size: 16px;
+        }
+
+        h1 {
+            color: #894fd0;
+            font-family: 'Arial Black', sans-serif;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Créer la carte centrée sur les nouvelles coordonnées et avec un zoom plus élevé
+        var map = L.map('map').setView([48.419250862590445, -4.47207070303311], 18); // Zoom à 15 pour plus de détails
+    
+        // Ajouter un fond de carte (OpenStreetMap)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+    
+        // Liste des points d'intérêt (POI) avec leurs indices pour le code Vigenère
+        var pointsOfInterest = [
+            {
+                name: "LE FOYZ !",
+                coords: [48.41983164135117, -4.470428167680554],  // Remplace par tes coordonnées
+                clue: "Levez les yeux!"
+            },
+            {
+                name: "LA RDE",
+                coords: [48.419364027589324, -4.470690819136357],
+                clue: "Les tables ne se reposent jamais"
+            },
+            {
+                name: "LE SHREU",
+                coords: [48.41970395934042, -4.471340493110961],
+                clue: "Ça arrive !"
+            },
+            {
+                name: "LA SALLE",
+                coords: [48.419225597946216, -4.473575286894725],
+                clue: "J'espère que vous avez des gros bras"
+            },
+            {
+                name: "LE GYMNASE",
+                coords: [48.41936219736024, -4.474217650342166],
+                clue: "Mince je dois aller chercher ma balle de volley"
+            },
+            {
+                name: "LE BAT F",
+                coords: [48.41961372393324, -4.47310692703492],
+                clue: "Laurence Gautier regarde dans sa direction"
+            },
+            {
+                name: "LE CAFET",
+                coords: [48.4194392028048, -4.472264915992252],
+                clue: "??"
+            },
+        ];
+    
+        // Ajouter les marqueurs pour chaque POI
+        pointsOfInterest.forEach(function(poi) {
+            var marker = L.marker(poi.coords).addTo(map);
+            marker.bindPopup('<b>' + poi.name + '</b><br>' + poi.clue);
+        });
+    </script>
+</body>
+</html>

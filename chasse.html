@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ET MAINTENANT ?</title>
+    <title>SUPRISE !!</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
     <style>
@@ -17,6 +17,7 @@
             font-family: 'Arial Black', sans-serif;
             flex-direction: column;
             overflow: auto;
+            background-color: black;
         }
 
         #background {
@@ -37,29 +38,12 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            text-align: center;
             gap: 10px;
             padding: 20px;
             width: 80%;
             max-width: 600px;
-        }
-
-        .search-bar {
-    width: 95%;
-    font-family: "Arial Black", sans-serif;
-    padding: 10px;
-    font-size: 1rem;
-    margin-bottom: 20px;
-    border: 3px solid #8000ff;
-    border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #894fd0;
-    text-align: center; /* Centrer le texte dans la barre */
-}
-
-        .search-bar:focus {
-            outline: none;
-            border-color: rgb(231, 58, 154);
-            box-shadow: 0 0 10px rgb(231, 58, 154);
         }
 
         .btn {
@@ -282,9 +266,12 @@
         @media (max-width: 640px) {
             html, body {
                 background-position: 62% center !important;
-
         height: 100vh; /* Force à remplir la hauteur de l'écran */
     }
+
+        p {
+            font-family: "Montserrat";
+        }
 
         .dropdown {
                 right: 20px;
@@ -329,6 +316,11 @@
         height: 100vh; /* Force à remplir la hauteur de l'écran */
     }
 
+        p {
+            font-family: "Montserrat";
+
+        }
+        
         .dropdown {
                 right: 20px;
             }
@@ -364,21 +356,52 @@
 
         }
 
-        #touch-logo {
-            position: fixed; /* Fixe le logo par rapport à la fenêtre */
-            bottom: 20px; /* Positionne le logo à 20px du bas */
-            right: 20px; /* Positionne le logo à 20px du côté droit */
-            width: 20px; /* Ajuste la taille du logo si nécessaire */
-            height: auto; 
-            z-index: 10; /* Assure qu'il soit au-dessus des autres éléments */
+
+        .block-rules {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-left: 40px; /* Décale le contenu sur la droite pour qu'il soit aligné avec le point */
+            background-color: black;
+            color: rgb(170, 164, 164);
+            font-family: 'Arial Black', sans-serif;
+            text-align: center;
+            padding: 12px 24px;
+            border: 3px solid #8000ff;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            z-index: 1; /* Pour s'assurer que le bouton est devant */
+            margin-bottom: 10px; /* Espacement entre les boutons */
         }
+
+        .alineas {
+            margin-left: 20px; /* Ajuste cette valeur selon le besoin */
+        }
+
+        ul {
+            list-style-type: disc; /* Définit les puces comme des cercles */
+            margin-left: 20px; /* Décale légèrement la liste vers la droite */
+            padding-left: 20px; /* Espace entre les puces et le texte */
+        }
+
+        /* Optionnel : personnalisation des puces (si tu veux changer le style) */
+        ul li {
+            font-size: 1rem; /* Ajuste la taille de la police */
+            margin-bottom: 5px; /* Espacement entre les éléments de la liste */
+        }
+
+        p {
+            font-size: 0.8rem;
+            color: rgb(231, 58, 154);
+            text-shadow: 1px 1px 0.5px rgba(0, 0, 0, 1);
+        }
+
     </style>
 </head>
 <body>
-    <a href="chasse.html" class="absolute bottom-0 right-0 p-4 opacity-70">
-        <img id="touch-logo" src="assets/tact1.png" alt="Logo Tactile"/>
-    </a>
-    
+
 <div id="background"></div>
 <a href="https://www.instagram.com/ensta4pattes?igsh=c2Zwa3NkMGtuamhh&utm_source=qr" target="_blank" class="instagram-button">
     <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="instagram-icon">
@@ -397,9 +420,19 @@
 </div>
 
 <div class="container">
-    <input type="password" id="password" class="search-bar" placeholder="??">
-    <button class="btn" onclick="checkPassword()">OUI ?</button>
-    <p id="errorMessage" class="error">NON ! Est-ce que vous nous connaissez ?</p>
+    <br>
+    <div class="block-rules">
+        <p class="alineas"><strong>Vous avez aimé la première chasse ??</strong></p>
+        <p>OUI ?</p>
+        <p>De toute façon vous n'avez pas le choix !</p>
+        <p>Vous l'avez trouvé facile ?</p>
+        <p>Votre serviteur vous a entendu </p>
+        <p>Mon oeuvre préférée est ONE PIECE et c'est ainsi que j'ai décidé d'organiser une grande chasse aux trésors !</p>
+        <p>"Les anciens avaient leur propre manière de chiffrer leurs messages, jouant avec les lettres comme un musicien avec ses notes. Ici, une clé pourrait transformer l’ordinaire en mystère, à condition de savoir l’accorder au bon rythme."</p>
+        <p>Des bisous !</p>
+        <p>Votre dev préféré !</p>
+    </div>
+    <button onclick="window.location.href='carte.html'" class="btn">C'est la carte, c'est la carte !</button>
 </div>
 
 <script>
