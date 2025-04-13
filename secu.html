@@ -609,7 +609,6 @@
         fetch("assets/pp/help.json")
         .then(response => response.json())
         .then(data => {
-            // Insérer l'image encodée en Base64 dans la balise <img>
             document.getElementById("image").src = "data:image/jpeg;base64," + data.image;
         })
         .catch(error => console.error("Erreur de chargement de l'image :", error));
